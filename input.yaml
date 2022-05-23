@@ -1,0 +1,9 @@
+taskExecutorCommands:
+- name: "Foo"
+  command: "grep MemTotal /proc/meminfo"
+  store_output: true
+- name: "Bar"
+  command:  "echo 'system memory {{ commandFoo.output }}'" 
+  store_output: true
+- name: "Baz"  
+  command:  "echo 'This will not be stored'" 
